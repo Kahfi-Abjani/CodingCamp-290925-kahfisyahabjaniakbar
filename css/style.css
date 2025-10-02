@@ -125,3 +125,76 @@ body.dark .toast.show{opacity:1;transform: translate(-50%, -50%) scale(1)}
     white-space: nowrap; /* agar teks tidak patah */
   }
 }
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-wrap, .summary {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .table-wrap table, .summary table {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 13px; }
+
+  .controls input[type="text"],
+  .controls input[type="datetime-local"],
+  .btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .progress-area { width: 100%; }
+  .progress-outer { width: 100%; }
+}
+
+
+@media (max-width: 480px) {
+  .action-btn, .btn, .status-checkbox {
+    padding: 10px;
+    min-height: 40px;
+  }
+
+  .status-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters input, .filters select {
+    width: 100%;
+  }
+}
+
+
