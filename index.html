@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>To Do List by Kahfi Abjani</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>To Do List</h1>
+      <button id="darkToggle" class="btn_mode" title="Toggle dark mode">Switch Mode : 🌙</button>
+    </header>
+
+    <main class="card">
+    <table class="summary">
+      <thead>
+        <tr>
+          <th colspan="3">
+            <div class="progress-area">
+              <div class="progress-title">TASKS PROGRESS</div>
+              <div id="globalPercent" class="progress-percent">0%</div>
+              <div class="progress-outer"><div id="globalFill" class="progress-fill"></div></div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th>Total Tasks</th>
+          <th>Pending Tasks</th>
+          <th>Completed Tasks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="sumTotal">0</td>
+          <td id="sumPending">0</td>
+          <td id="sumCompleted">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <br/>
+      <div class="controls">
+        <input id="taskInput" type="text" placeholder="Task title...">
+        <input id="dateInput" type="datetime-local">
+        <button id="addTaskBtn" class="btn primary">Add</button>
+
+        <div class="actions">
+          <button id="importCsvBtn" class="btn">Import CSV</button>
+          <button id="importXlsBtn" class="btn">Import Excel</button>
+          <button id="exportCsvBtn" class="btn">Export CSV</button>
+          <button id="exportXlsBtn" class="btn">Export Excel</button>
+          <button id="deleteAllBtn" class="btn danger">Delete All</button>
+        </div>
+      </div>
+
+      <br/>
+      <div class="filters">
+        <select id="statusFilter">
+          <option value="all">All Tasks</option>
+          <option value="Pending">Pending Tasks</option>
+          <option value="Completed">Completed Tasks</option>
+        </select>
+        <input id="searchInput" type="text" placeholder="Search task...">
+      </div>
+     
+
+      <section class="table-wrap">
+        <table id="taskTable">
+          <thead>
+            <tr>
+              <th data-sort="task">Task <span class="sort-ind"></span></th>
+              <th data-sort="created">Created <span class="sort-ind"></span></th>
+              <th data-sort="date">Due Date <span class="sort-ind"></span></th>
+              <th data-sort="updated">Updated <span class="sort-ind"></span></th>
+              <th data-sort="status">Status <span class="sort-ind"></span></th>
+              <th>Progress</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="taskBody">
+            <tr id="emptyRow"><td colspan="7" class="empty">No tasks yet — add new task</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" aria-hidden="true"></div>
+    <input id="fileInput" type="file" style="display:none">
+    <footer class="footer">Created by Kahfi Abjani</footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
