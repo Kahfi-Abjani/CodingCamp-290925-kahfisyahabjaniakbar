@@ -93,3 +93,19 @@ body.dark .filters input {background:#000000;color:#dbeafc;padding: 9px;border-r
 body.dark .expired td {background-color: #000000 !important;color: #a10000 !important;text-decoration: line-through;}
 body.dark .toast{position:fixed;top:50%;left: 50%;transform: translate(-50%, -50%);background:#ffffff;color:#000000;padding:10px 14px;border-radius:8px;opacity:0;transition:opacity .25s, transform .25s;z-index:999;text-align: center; max-width: 80%;}
 body.dark .toast.show{opacity:1;transform: translate(-50%, -50%) scale(1)}
+
+@media (max-width: 768px) {
+  .summary {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .summary thead, 
+  .summary tbody, 
+  .summary tr, 
+  .summary th, 
+  .summary td {
+    white-space: nowrap; /* agar teks tidak patah */
+  }
+}
