@@ -109,3 +109,19 @@ body.dark .toast.show{opacity:1;transform: translate(-50%, -50%) scale(1)}
     white-space: nowrap; /* agar teks tidak patah */
   }
 }
+
+@media (max-width: 768px) {
+body.dark  .summary {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+ body.dark .summary thead, 
+  .summary tbody, 
+  .summary tr, 
+  .summary th, 
+  .summary td {
+    white-space: nowrap; /* agar teks tidak patah */
+  }
+}
