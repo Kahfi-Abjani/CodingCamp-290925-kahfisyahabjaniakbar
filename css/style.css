@@ -111,17 +111,17 @@ body.dark .toast.show{opacity:1;transform: translate(-50%, -50%) scale(1)}
 }
 
 @media (max-width: 768px) {
-body.dark  .summary {
+  body.dark .summary {
     display: block;
     overflow-x: auto;
     width: 100%;
   }
 
- body.dark .summary thead, 
-  .summary tbody, 
-  .summary tr, 
-  .summary th, 
-  .summary td {
+  body.dark .summary thead,
+  body.dark .summary tbody,
+  body.dark .summary tr,
+  body.dark .summary th,
+  body.dark .summary td {
     white-space: nowrap; /* agar teks tidak patah */
   }
 }
